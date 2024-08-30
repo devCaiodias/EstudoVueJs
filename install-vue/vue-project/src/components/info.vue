@@ -9,6 +9,9 @@
             <li>Js</li>
             <li>Vue</li>
         </ul>
+        <div>
+            <button @click="showEmail">{{ TextBotao }}</button>
+        </div>
         <p v-show="mostrar_email">Mande essa Mensagem para: {{ email}}</p>
         <p>Para ver meu portifolio basta <a v-bind:href="meuLink">acessar aki</a></p>
         <Picture/>
@@ -26,10 +29,22 @@
         data() {
             return {
                 esta_Trabalhando: false,
-                mostrar_email: true,
+                mostrar_email: false,
                 email: 'caiodias@gmail.com',
-                meuLink: 'https://www.lofi.com/'
+                meuLink: 'https://www.lofi.com/',
+                TextBotao: 'Mostrar Email'
             }
+        },
+        methods: {
+          showEmail() {
+            this.mostrar_email = !this.mostrar_email
+            
+            if (!this.mostrar_email) {
+                this.TextBotao = 'Mostrar Email'
+            }else {
+                this.TextBotao = 'Esconder Email'
+            }
+          }  
         }
     }
 </script>
