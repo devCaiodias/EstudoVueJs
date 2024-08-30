@@ -2,16 +2,22 @@
   <div>
     <primeiroComponente/>
     <p> {{ testando }}</p>
+    <LifeCycle />
   </div>
 </template>
 
 <script>
-  import primeiroComponente from './components/primeiroComponente.vue'
+
+import PrimeiroComponente from './components/PrimeiroComponente.vue';
+import LifeCycle from './components/LifeCycle.vue'
+
   
   export default {
     name: 'App',
     components: {
-      primeiroComponente
+      PrimeiroComponente,
+      // eslint-disable-next-line vue/no-unused-components
+      LifeCycle
     },
     data() {
       return {
