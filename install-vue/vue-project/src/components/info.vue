@@ -2,12 +2,13 @@
     <div>
         <p v-if="esta_Trabalhando">Estou Trabalhando no momento.</p>
         <p v-else>Mais Esto estudando no momento.</p>
-        <p>Utilizo as seguinte Limguagem: </p>
+        <p>Utilizo as seguinte Limguagem para Font-end: </p>
         <ul>
-            <li>Html</li>
-            <li>Css</li>
-            <li>Js</li>
-            <li>Vue</li>
+            <li v-for="(linguagem, index) in font_end" v-bind:key="index">{{ linguagem }}</li>
+        </ul>
+        <p>Utilizo as segintes Limguagem para back-end: </p>
+        <ul>
+            <li v-for="language in back_end" v-bind:key="language.id">{{ language.limguagem }}</li>
         </ul>
         <div>
             <button @click="showEmail">{{ TextBotao }}</button>
@@ -32,7 +33,13 @@
                 mostrar_email: false,
                 email: 'caiodias@gmail.com',
                 meuLink: 'https://www.lofi.com/',
-                TextBotao: 'Mostrar Email'
+                TextBotao: 'Mostrar Email',
+                font_end: ["html", "css", "vue", "js"],
+                back_end: [
+                    {id: 1, limguagem: "js"},
+                    {id: 2, limguagem: "py"},
+                    {id: 3, limguagem: "typeScript"},
+                ]
             }
         },
         methods: {
