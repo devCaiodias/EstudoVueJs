@@ -13,7 +13,7 @@
             <button @click="showEmail">{{ TextBotao }}</button>
         </div>
         <p v-show="mostrar_email">Mande essa Mensagem para: {{ email}}</p>
-        <p>Para ver meu portifolio basta <a v-bind:href="meuLink">acessar aki</a></p>
+        <p class="test">Para ver meu portifolio basta <a v-bind:href="meuLink">acessar aki</a></p>
         <Picture/>
     </div>
 </template>
@@ -48,3 +48,9 @@
         }
     }
 </script>
+
+<style>
+    .paragrafo-pai {
+        color: blueviolet;
+    }
+</style>

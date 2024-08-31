@@ -1,7 +1,8 @@
 <template>
   <div>
+    <Header />
     <primeiroComponente/>
-    <p> {{ testando }}</p>
+    <p class="paragrafo-pai">O dados de app é: {{ testando }}</p>
     <LifeCycle />
     <pessoa />
   </div>
@@ -12,6 +13,7 @@
 import PrimeiroComponente from './components/PrimeiroComponente.vue';
 import LifeCycle from './components/LifeCycle.vue';
 import Pessoa from './components/Pessoa.vue';
+import Header from './components/Header.vue';
 
   
   export default {
@@ -20,7 +22,9 @@ import Pessoa from './components/Pessoa.vue';
       PrimeiroComponente,
       // eslint-disable-next-line vue/no-unused-components
       LifeCycle,
-      Pessoa
+      Pessoa,
+      // eslint-disable-next-line vue/no-reserved-component-names
+      Header
     },
     data() {
       return {
@@ -29,3 +33,18 @@ import Pessoa from './components/Pessoa.vue';
     }
   }
 </script>
+
+<style>
+  body {
+    background-color: black;
+    color: white;
+  }
+
+  a {
+    color: aqua;
+  }
+
+  .test {
+    color: blueviolet;
+  }
+</style>
