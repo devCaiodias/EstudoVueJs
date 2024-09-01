@@ -1,5 +1,6 @@
 <template>
     <div>
+
         <p v-if="esta_Trabalhando">Estou Trabalhando no momento.</p>
         <p v-else>Mais Esto estudando no momento.</p>
         <p>Utilizo as seguinte Limguagem para Font-end: </p>
@@ -27,11 +28,14 @@
         components: { Picture },
         // eslint-disable-next-line vue/multi-word-component-names
         name: 'info',
+
+        props: {
+            email: String,
+            esta_Trabalhando: Boolean
+        },
         data() {
             return {
-                esta_Trabalhando: false,
                 mostrar_email: false,
-                email: 'caiodias@gmail.com',
                 meuLink: 'https://www.lofi.com/',
                 TextBotao: 'Mostrar Email',
                 font_end: ["html", "css", "vue", "js"],
