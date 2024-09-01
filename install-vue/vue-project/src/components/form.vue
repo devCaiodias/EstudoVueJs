@@ -38,7 +38,8 @@ import Submit from './form/Submit.vue';
                 const name = this.name
                 const email = this.email
                 
-                console.log(`Dados enviados Nome =${name} e Email =${email}`)
+                console.log(`Nome =${name}`)
+                console.log(`Email = ${email}`)
 
                 // Ajax
 

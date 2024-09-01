@@ -4,16 +4,20 @@
         <p> Meu nome é {{ nome }} </p>
         <p> minha Carreira é {{ Carreira }} </p>
         <MultiplosEventos />
+        <Reutilizacao />
     </div>
 </template>
 
 <script>
-    import MultiplosEventos from './MultiplosEventos.vue'
+    import MultiplosEventos from './MultiplosEventos.vue';
+    import Reutilizacao from './Reutilizacao.vue';
 
     export default {
         name: 'PrimeiroComponente',
         components: {
-            MultiplosEventos
+            MultiplosEventos,
+            // eslint-disable-next-line vue/no-unused-components
+            Reutilizacao
         },
         data() {
             return {
